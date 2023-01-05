@@ -128,6 +128,12 @@ public class Robot extends TimedRobot {
       driveBase.YButtonPressed();
     }
 
+
+	// Press the Start button to stop the motors (hold it down)
+	if (xboxController.getStartButton()){
+		driveBase.stopAllMovement();
+	}
+
     // get analog input from xbox controller
     double leftAnalogX 	= xboxController.getLeftX();
     double leftAnalogY 	= xboxController.getLeftY();

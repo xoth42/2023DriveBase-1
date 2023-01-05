@@ -324,6 +324,19 @@ public class TankDrive {
 	}
 
 	/**
+	 * For stopping the robot while the robot is running
+	 */
+	public void stopAllMovement() {
+		// Set motors to 0
+		leftVictor.set(ControlMode.PercentOutput, 0);
+		leftSparkMax.set(0);
+		rightTalon.set(ControlMode.PercentOutput,0);
+		rightVictor.set(ControlMode.PercentOutput, 0);
+
+		System.out.println("Motors set to 0");
+	}
+
+	/**
 	 * PID Tuning Mode: Cycles between the PID constants
 	 */
 	public void cyclePIDConstant() {
